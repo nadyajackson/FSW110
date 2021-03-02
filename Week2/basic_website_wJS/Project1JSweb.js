@@ -8,19 +8,23 @@ const NAV = document.getElementById('myNav');
     a.setAttribute("href", "https://www.facebook.com");
     let y = document.createTextNode("Facebook");
     a.appendChild(y);
-    NAV.appendChild(a)
+    NAV.appendChild(a).style.paddingRight = "50px";
 
     let b = document.createElement('a');
     b.setAttribute("href", "https://www.instagram.com");
     let z = document.createTextNode("Instagram");
     b.appendChild(z);
-    NAV.appendChild(b)
+    NAV.appendChild(b).style.paddingRight = "50px";
 
     let c = document.createElement('a');
     c.setAttribute("href", "https://www.twitter.com");
     let q = document.createTextNode("Twitter");
     c.appendChild(q);
-    NAV.appendChild(c)
+    NAV.appendChild(c).style.paddingRight = "50px";
+
+
+
+
 
 var newHead = document.createElement('H1');
 newHead.textContent = "This is My Project 1 Assignment"
