@@ -1,30 +1,23 @@
 document.body.style.backgroundColor="lightblue";
 
-//add
-a = document.getElementById("first");
-b = document.getElementById("second");
-
-document.getElementById("add").addEventListener("click", addition);
-function addition(){
-    document.getElementById("answer").style.color = "red"; //just to test button fuction before debugging math
+document.getElementById("add").addEventListener("click", display);
+function display(){
+var add = Number(document.getElementById("first").value) + Number(document.getElementById("second").value);
+    document.getElementById("result").innerHTML = "Results: " + add;
+    document.getElementById("result").style.color = "red";
 }
 
-//sub
-x = document.getElementById("here");
-y = document.getElementById("there");
-
-document.getElementById("sub").addEventListener("click", subtraction);
-function subtraction(){
-    z= x-y;
-    return document.getElementById("solution").innerHTML = z;
+document.getElementById("sub").addEventListener("click", answer);
+function answer(){
+var sub = Number(document.getElementById("Here").value) - Number(document.getElementById("There").value);
+    document.getElementById("result").innerHTML = "Results: " + sub;
+    document.getElementById("result").style.color = "red";
 }
 
-//mul
-q = document.getElementById("one");
-r = document.getElementById("two");
-
-document.getElementById("mul").addEventListener("click", multiply);
-function multiply(){
-    m= q*r;
-    return document.getElementById("success").innerHTML = m;
+document.getElementById("mul").addEventListener("click", conclusion);
+function conclusion(){
+var mul = Number(document.getElementById("one").value) * Number(document.getElementById("two").value);
+    document.getElementById("result").innerHTML = "Results: " + mul;
+    document.getElementById("result").style.color = "red";
 }
+
