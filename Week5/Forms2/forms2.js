@@ -29,45 +29,20 @@ function Travel(){
         return document.getElementById("Athens").value;
     }
 }
-
-/* function Allergy1(){
-    if (document.getElementById("Lactose-Free").checked = true){
-        return document.getElementById("Lactose-Free").value;
+function getCheckboxes(name) {
+    const allergyList = document.querySelectorAll(`input[name="${name}"]:checked`);
+    let values = [ ];
+        allergyList.forEach((checkbox) =>{
+            values.push(checkbox.value);
+        });
+        return values
     }
-    else{
-        return " "
-    }}
-function Allergy2(){
-    if (document.getElementById("Gluten-Free").checked = true){
-        return document.getElementById("Gluten-Free").value;
-    }
-    else{
-        return " "
-    }}
-function Allergy3(){
-    if (document.getElementById("Nuts").checked = true){
-        return document.getElementById("Nuts").value;
-    }
-    else{
-        return " "
-    }}
-function Allergy4(){
-    if (document.getElementById("Vegan").checked = true){
-        return document.getElementById("Vegan").value;
-    }
-    else{
-        return " "
-    }} */
-
-    var allergyList = document.querySelectorAll('[allergies="checked"]') !== null;
-    var results = allergyList.value;
-
 function Submission(){
     alert('Name: ' + document.getElementById("fname").value +' '+document.getElementById("lname").value + 
             "\nAge: " + document.getElementById("age").value +
             "\nNewsletter Sign-Up: " + Newsletter() +
             "\nDestination: " + Travel() +
-            "\nAllergies: " + results +
+            "\nAllergies: " + getCheckboxes('allergies') +
             "\nHave a Safe Flight!!!"
     );
     document.getElementById("form").reset();

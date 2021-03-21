@@ -7,7 +7,7 @@ document.getElementById('Submit').addEventListener("click", Submit);
 function Submit(){
     alert('Name: ' + document.getElementById("fname").value +
     ' '+document.getElementById("lname").value + "\nEmail: " +
-        document.getElementById("email").value
+        document.getElementById("email").value,
     );
-    document.getElementById("form").reset();
+    document.getElementById("form").reset()
 }
