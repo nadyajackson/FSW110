@@ -11,24 +11,17 @@ function Newsletter(){
     }
 }
 
+function Travel(where){
+        const places = document.querySelectorAll(`input[name="${where}"]:checked`);
+        let land = [ ];
+            places.forEach((radio) =>{
+                land.push(radio.value);
+            });
+            return land
+        }
 
-function Travel(){
-    if (document.getElementById("Paris").checked = true){
-        return document.getElementById("Paris").value;
-    }
-    else if (document.getElementById("London").checked = true){
-        return document.getElementById("London").value;
-    }
-    else if (document.getElementById("Denali").checked = true){
-        return document.getElementById("Denali").value;
-    }
-    else if (document.getElementById("Rome").checked = true){
-        return document.getElementById("Rome").value;
-    }
-    else if (document.getElementById("Athens").checked = true){
-        return document.getElementById("Athens").value;
-    }
-}
+
+
 function getCheckboxes(name) {
     const allergyList = document.querySelectorAll(`input[name="${name}"]:checked`);
     let values = [ ];
@@ -41,7 +34,7 @@ function Submission(){
     alert('Name: ' + document.getElementById("fname").value +' '+document.getElementById("lname").value + 
             "\nAge: " + document.getElementById("age").value +
             "\nNewsletter Sign-Up: " + Newsletter() +
-            "\nDestination: " + Travel() +
+            "\nDestination: " + Travel('Destination') +
             "\nAllergies: " + getCheckboxes('allergies') +
             "\nHave a Safe Flight!!!"
     );
