@@ -11,14 +11,7 @@ function Newsletter(){
     }
 }
 
-function Travel(where){
-        const places = document.querySelectorAll(`input[name="${where}"]:checked`);
-        let land = [ ];
-            places.forEach((radio) =>{
-                land.push(radio.value);
-            });
-            return land
-        }
+
 
 
 
@@ -34,7 +27,7 @@ function Submission(){
     alert('Name: ' + document.getElementById("fname").value +' '+document.getElementById("lname").value + 
             "\nAge: " + document.getElementById("age").value +
             "\nNewsletter Sign-Up: " + Newsletter() +
-            "\nDestination: " + Travel('Destination') +
+            "\nDestination: " + document.getElementById("Destination").value +
             "\nAllergies: " + getCheckboxes('allergies') +
             "\nHave a Safe Flight!!!"
     );
