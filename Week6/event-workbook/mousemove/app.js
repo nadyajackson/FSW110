@@ -1,4 +1,4 @@
-var box = document.getElementsByClassName("red-box");
+var box = document.querySelector(".red-box");
 
 var newPara = document.createElement("P");
 newPara.setAttribute("id","Para");
@@ -8,9 +8,9 @@ document.body.append(newPara);
 var getPara = document.getElementById("Para");
 getPara.style.textAlign = "center";
 
-box.addEventListener("mousemove", XYZ);
-function XYZ(){
-    var x = clientX;
-    var y = clientY;
-    getPara.innerHTML="Mouse Coordinates" + x + y ;
+box.addEventListener("mouseover", XYZ);
+function XYZ(event){
+    var x = event.clientX;
+    var y = event.clientY;
+    getPara.innerHTML="Mouse Coordinates: " + x +" "+ y ;
 };
