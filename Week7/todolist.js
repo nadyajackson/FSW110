@@ -15,6 +15,10 @@ function Submission(e){
     delete1.setAttribute("id", "deleted1");
     delete1.setAttribute("name", "deleted1");
     delete1.setAttribute("value", "delete");
+    delete1.addEventListener("click", remove)
+    function remove(){
+        document.getElementById('para1').style.display = "none";
+    }
     document.getElementById('para1').append(delete1);
 
 
@@ -29,6 +33,10 @@ function Submission(e){
     delete2.setAttribute("id", "deleted2");
     delete2.setAttribute("name", "deleted2");
     delete2.setAttribute("value", "delete");
+    delete2.addEventListener("click", remove2)
+    function remove2(){
+        document.getElementById('para2').style.display = "none";
+    }
     document.getElementById('para2').append(delete2);
 
     var par3 = document.createElement('p');
@@ -41,6 +49,10 @@ function Submission(e){
     delete3.setAttribute("id", "deleted3");
     delete3.setAttribute("name", "deleted3");
     delete3.setAttribute("value", "delete");
+    delete3.addEventListener("click", remove3)
+    function remove3(){
+        document.getElementById('para3').style.display = "none";
+    }
     document.getElementById('para3').append(delete3);
 
     var par4 = document.createElement('p');
@@ -53,6 +65,10 @@ function Submission(e){
     delete4.setAttribute("id", "deleted4");
     delete4.setAttribute("name", "deleted4");
     delete4.setAttribute("value", "delete");
+    delete4.addEventListener("click", remove4)
+    function remove4(){
+        document.getElementById('para4').style.display = "none";
+    }
     document.getElementById('para4').append(delete4);
 
     var par5 = document.createElement('p');
@@ -65,12 +81,11 @@ function Submission(e){
     delete5.setAttribute("id", "deleted5");
     delete5.setAttribute("name", "deleted5");
     delete5.setAttribute("value", "delete");
+    delete5.addEventListener("click", remove5)
+    function remove5(){
+        document.getElementById('para5').style.display = "none";
+    }
     document.getElementById('para5').append(delete5);
 
     document.getElementById("form").reset();
-}
-
-document.getElementById('deleted1').addEventListener('click', remove);
-function remove(){
-    document.getElementById('para1').style.display = "none";
 }
